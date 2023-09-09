@@ -1,0 +1,17 @@
+package com.lts.config
+
+import reactor.blockhound.BlockHound
+import reactor.blockhound.integration.BlockHoundIntegration
+
+class JHipsterBlockHoundIntegration: BlockHoundIntegration {
+    override fun applyTo(builder: BlockHound.Builder) {
+        // Workaround until https://github.com/reactor/reactor-core/issues/2137 is fixed
+        builder.allowBlockingCallsInside("reactor.core.scheduler.BoundedElasticScheduler\$BoundedState", "dispose")
+        builder.allowBlockingCallsInside("reactor.core.scheduler.BoundedElasticScheduler", "schedule")
+        builder.allowBlockingCallsInside("org.springframework.validation.beanvalidation.SpringValidatorAdapter", "validate")
+        builder.allowBlockingCallsInside("com.lts.service.MailService", "sendEmailFromTemplate")
+        builder.allowBlockingCallsInside("com.lts.security.DomainUserDetailsService", "createSpringSecurityUser")
+        builder.allowBlockingCallsInside("io.r2dbc.mssql.client.ssl.TdsSslHandler", "createSslHandler")
+    }
+
+}

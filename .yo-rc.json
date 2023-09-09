@@ -1,0 +1,54 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "baseName": "msemail",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.16.0"
+      }
+    ],
+    "buildTool": "maven",
+    "cacheProvider": "no",
+    "clientFramework": "no",
+    "creationTimestamp": 1694204668778,
+    "databaseType": "sql",
+    "devDatabaseType": "mssql",
+    "dtoSuffix": "DTO",
+    "enableGradleEnterprise": false,
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "entitySuffix": "",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "7.9.3",
+    "jwtSecretKey": "MGI0ZGQ0ZTk2ZjU1YzgyYjU5MTliZWIzZmFkNDEzZDRmNGY1OTQ5OWNlZjgyMDk4ZjZiMjg2MjNlNjBjMGNmNWZjOWYxNmY5YTQwNGU0ZmFlYWEyZDQ0OGYwZDgwNGE2OWE2NDA3M2NiYThkNTM2OTFlZGQ5OGU0MGJhZTE4ZjE=",
+    "languages": ["en"],
+    "messageBroker": "kafka",
+    "microfrontend": true,
+    "microfrontends": [],
+    "nativeLanguage": "en",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.16.0"
+      }
+    ],
+    "packageName": "com.lts",
+    "pages": [],
+    "prodDatabaseType": "mssql",
+    "reactive": true,
+    "searchEngine": false,
+    "serverPort": "8081",
+    "serverSideOptions": ["messageBroker:kafka"],
+    "serviceDiscoveryType": "eureka",
+    "skipCheckLengthOfIdentifier": false,
+    "skipClient": true,
+    "skipFakeData": false,
+    "skipUserManagement": true,
+    "testFrameworks": ["cypress"],
+    "websocket": false,
+    "withAdminUi": false
+  }
+}
